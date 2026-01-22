@@ -46,7 +46,7 @@ const equipmentCategories: Record<string, EquipmentItem[]> = {
 export default function EquipmentPage() {
     return (
         <Section size="3" style={{ background: 'var(--gray-1)', minHeight: '100vh' }}>
-            <Container size="4">
+            <Container size="4" px={{ initial: '5', md: '0' }}>
                 <Heading size="9" mb="4" align="center">Парк Оборудования</Heading>
                 <Text as="p" size="5" mb="9" align="center" color="gray" style={{ maxWidth: '800px', marginInline: 'auto' }}>
                     Современное цифровое производство в вашем распоряжении. От 3D-печати до прецизионной фрезеровки.

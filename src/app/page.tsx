@@ -35,7 +35,7 @@ export default function Home() {
 
       {/* About Fablab / What Is It */}
       <Section size="3" id="about">
-        <Container size="4">
+        <Container size="4" px={{ initial: '5', md: '0' }}>
           <Grid columns={{ initial: '1', md: '2' }} gap="8" align="center">
             <Box>
               <Heading size="8" mb="6" color="indigo">Что такое ФАБЛАБ</Heading>
@@ -66,7 +66,7 @@ export default function Home() {
 
       {/* Origin / Where From */}
       <Section size="3" style={{ background: 'var(--gray-2)' }} id="origin">
-        <Container size="4">
+        <Container size="4" px={{ initial: '5', md: '0' }}>
           <Grid columns={{ initial: '1', md: '2' }} gap="8" align="center">
             <Box position="relative" style={{ height: '450px', order: 1 }}>
               <Image
@@ -98,7 +98,7 @@ export default function Home() {
 
       {/* Technologies Section */}
       <Section size="3" id="technologies">
-        <Container size="4">
+        <Container size="4" px={{ initial: '5', md: '0' }}>
           <Heading size="9" mb="2" align="center">Технологии</Heading>
           <Text size="4" color="gray" align="center" mb="8" style={{ maxWidth: '600px', margin: '0 auto 3rem auto' }}>
             Набор технологических и интеллектуальных ресурсов для превращения идей в функциональные прототипы.
@@ -146,7 +146,7 @@ export default function Home() {
 
       {/* Team Section */}
       <Section size="3" id="team" style={{ background: 'var(--gray-2)' }}>
-        <Container size="3">
+        <Container size="3" px={{ initial: '5', md: '0' }}>
           <Heading size="8" mb="6" align="center">Наша команда</Heading>
           <Grid columns={{ initial: '1', md: '2' }} gap="4">
             {[
@@ -174,7 +174,7 @@ export default function Home() {
 
       {/* Charter & Network */}
       <Section size="3" style={{ background: 'var(--indigo-2)' }}>
-        <Container size="4">
+        <Container size="4" px={{ initial: '5', md: '0' }}>
           <Grid columns={{ initial: '1', md: '2' }} gap="9">
             <Box id="charter" style={{ scrollMarginTop: '100px' }}>
               <Heading size="8" mb="6">Хартия Fablab</Heading>
@@ -239,7 +239,7 @@ export default function Home() {
           pointerEvents: 'none'
         }} />
 
-        <Container size="3" style={{ position: 'relative', zIndex: 1 }}>
+        <Container size="3" style={{ position: 'relative', zIndex: 1 }} px={{ initial: '5', md: '0' }}>
           <Flex direction="column" align="center" gap="6" style={{ textAlign: 'center' }}>
             <Heading size="9" style={{ color: 'white', letterSpacing: '-0.02em', textShadow: '0 2px 10px rgba(0,0,0,0.2)' }}>
               Хотите стать мейкером?

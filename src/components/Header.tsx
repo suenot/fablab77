@@ -22,7 +22,7 @@ const Header = () => {
 
     return (
         <header className="header">
-            <Container size="4">
+            <Container size="4" px={{ initial: '5', md: '0' }}>
                 <Flex justify="between" align="center" py="3">
                     <Flex align="center" gap="4">
                         <Link href="/" className="logo-link">

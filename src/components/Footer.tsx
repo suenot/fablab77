@@ -8,7 +8,7 @@ import Image from 'next/image';
 const Footer = () => {
   return (
     <footer className="footer">
-      <Container size="4">
+      <Container size="4" px={{ initial: '5', md: '0' }}>
         <Grid columns={{ initial: '1', sm: '2', md: '3' }} gap="8" py="8">
           <Box>
             <Heading size="4" mb="4" className="footer-heading">Фаблаб</Heading>
