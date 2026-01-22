@@ -83,8 +83,28 @@ const Footer = () => {
       <style jsx>{`
         .footer {
           background: var(--gray-2);
-          border-top: 1px solid var(--gray-5);
           margin-top: auto;
+          position: relative;
+        }
+        .footer::before {
+          content: '';
+          position: absolute;
+          top: -14px;
+          left: 0;
+          right: 0;
+          height: 15px;
+          background: var(--gray-2);
+          mask-image: url("data:image/svg+xml,%3Csvg width='30' height='15' viewBox='0 0 30 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 0L30 15H0L15 0Z' fill='black'/%3E%3C/svg%3E");
+          -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='30' height='15' viewBox='0 0 30 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 0L30 15H0L15 0Z' fill='black'/%3E%3C/svg%3E");
+          mask-repeat: repeat-x;
+          -webkit-mask-repeat: repeat-x;
+          transition: mask-position 2s ease, -webkit-mask-position 2s ease;
+          mask-position: 0 0;
+          -webkit-mask-position: 0 0;
+        }
+        .footer:hover::before {
+          mask-position: 500px 0;
+          -webkit-mask-position: 500px 0;
         }
         .footer-heading {
           color: var(--gray-12);
