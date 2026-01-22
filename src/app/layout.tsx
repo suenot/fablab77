@@ -17,8 +17,31 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Фаблаб Москва — Первый Российский фаблаб",
-  description: "Фаблаб МИСиС — лаборатория цифрового производства, где можно сделать почти все, что угодно.",
+  title: {
+    default: "Фаблаб Москва — Первый Российский фаблаб",
+    template: "%s | Фаблаб Москва",
+  },
+  description: "Фаблаб МИСиС — передовая лаборатория цифрового производства в Москве. 3D-печать, лазерная резка, фрезеровка, электроника и образовательные программы для мейкеров.",
+  keywords: ["Фаблаб", "FabLab", "Москва", "МИСиС", "3D-печать", "лазерная резка", "ЧПУ", "мастерская", "мейкеры", "DIY", "цифровое производство"],
+  authors: [{ name: "Фаблаб Москва" }],
+  metadataBase: new URL("https://fablab77.ru"), // Assuming this is the production URL, can be updated
+  openGraph: {
+    title: "Фаблаб Москва — Лаборатория цифрового производства",
+    description: "Воплощайте идеи в жизнь с помощью современных технологий цифрового производства. Открытый доступ к оборудованию и знаниям.",
+    url: "https://fablab77.ru",
+    siteName: "Фаблаб Москва",
+    locale: "ru_RU",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Фаблаб Москва",
+    description: "Лаборатория цифрового производства НИТУ МИСИС. Творите, изобретайте, создавайте.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
