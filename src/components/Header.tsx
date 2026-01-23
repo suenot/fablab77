@@ -4,8 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
-import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
-import { ChevronDownIcon, HamburgerMenuIcon, Cross1Icon } from '@radix-ui/react-icons';
+import { HamburgerMenuIcon, Cross1Icon } from '@radix-ui/react-icons';
 import { Box, Container, Flex, Text, Button } from '@radix-ui/themes';
 import { usePathname } from 'next/navigation';
 
@@ -29,14 +28,20 @@ const Header = () => {
     // Prevent body scroll when menu is open
     React.useEffect(() => {
         if (isOpen) {
+            const scrollY = window.scrollY;
+            window.scrollTo(0, 0);
+            document.body.style.position = 'fixed';
+            document.body.style.top = '0px';
+            document.body.style.width = '100%';
             document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = 'unset';
-            document.body.style.paddingRight = '0px';
+            return () => {
+                document.body.style.position = '';
+                document.body.style.top = '';
+                document.body.style.width = '';
+                document.body.style.overflow = '';
+                window.scrollTo(0, scrollY);
+            };
         }
-        return () => {
-            document.body.style.overflow = 'unset';
-        };
     }, [isOpen]);
 
     const toggleMenu = () => setIsOpen(!isOpen);
@@ -231,7 +236,7 @@ const Header = () => {
             {/* Mobile Full Screen Menu Overlay */}
             <div className={`mobile-menu-overlay ${isOpen ? 'open' : ''}`}>
                 <div className="mobile-menu-content">
-                    <Flex direction="column" align="center" justify="center" gap="6" style={{ height: '100%' }}>
+                    <Flex direction="column" align="center" justify="center" gap="4" style={{ height: '100%', minHeight: 0 }}>
                         {mobileMenuItems.map((item, idx) => (
                             <Link
                                 key={idx}
@@ -243,7 +248,7 @@ const Header = () => {
                                 {item.title}
                             </Link>
                         ))}
-                        <Flex gap="6" mt="8" align="center">
+                        <Flex gap="6" mt="6" align="center" className="menu-logos">
                             <a href="http://web.mit.edu/" target="_blank" style={{ opacity: 0.7 }}>
                                 <Image src="/img/logos/mit.png" alt="MIT" width={60} height={30} style={{ objectFit: 'contain' }} />
                             </a>
@@ -261,14 +266,15 @@ const Header = () => {
                         width: 100%;
                         height: 100dvh;
                         background: rgba(255, 255, 255, 0.98);
-                        backdrop-filter: blur(20px); 
+                        backdrop-filter: blur(20px);
                         z-index: 1050;
                         opacity: 0;
                         pointer-events: none;
                         transition: opacity 0.3s ease;
                         display: flex;
                         flex-direction: column;
-                        padding-top: 80px; 
+                        padding-top: 90px;
+                        overflow: hidden;
                     }
                     .mobile-menu-overlay.open {
                         opacity: 1;
@@ -276,22 +282,35 @@ const Header = () => {
                     }
                     .mobile-menu-content {
                         flex: 1;
-                        overflow-y: auto;
+                        overflow: hidden;
                         padding-bottom: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                     }
                     .mobile-menu-link {
                         font-family: var(--font-geist-sans), sans-serif;
-                        font-size: 32px;
+                        font-size: clamp(24px, 5vw, 32px);
                         font-weight: 700;
                         color: var(--gray-12);
                         text-decoration: none;
                         letter-spacing: -0.02em;
                         transition: all 0.2s ease;
                         position: relative;
+                        white-space: nowrap;
                     }
                     .mobile-menu-link:hover, .mobile-menu-link.active {
                         color: var(--indigo-10);
                         transform: scale(1.05);
+                    }
+                    @media (max-height: 600px) {
+                        .mobile-menu-link {
+                            font-size: clamp(20px, 4vw, 24px);
+                        }
+                        :global(.menu-logos) {
+                            margin-top: 1rem !important;
+                            gap: 1rem !important;
+                        }
                     }
                 `}</style>
             </div>
