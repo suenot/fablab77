@@ -5,7 +5,7 @@ export default function CharterPage() {
     return (
         <Section size="3">
             <Container size="3" px={{ initial: "4", sm: "6", md: "8" }}>
-                <Heading size="9" mb="6" align="center">Хартия Fablab</Heading>
+                <Heading size={{ initial: "7", md: "9" }} mb="6" align="center">Хартия Fablab</Heading>
 
                 <Box mb="6">
                     <Heading size="5" mb="2">Миссия</Heading>

@@ -41,8 +41,8 @@ export default function CtpoPage() {
     return (
         <Section size="3">
             <Container size="4" px={{ initial: "4", sm: "6", md: "8" }}>
-                <Heading size="9" mb="4" align="center">ЦТПО</Heading>
-                <Text as="p" size="5" mb="8" align="center" color="gray" style={{ maxWidth: '800px', marginInline: 'auto' }}>
+                <Heading size={{ initial: "7", md: "9" }} mb="4" align="center">ЦТПО</Heading>
+                <Text as="p" size={{ initial: "3", md: "5" }} mb="8" align="center" color="gray" style={{ maxWidth: '800px', marginInline: 'auto' }}>
                     Центр технологической поддержки образования — это уникальная площадка дополнительного образования московских школьников и повышения квалификации педагогов.
                 </Text>
 
@@ -56,7 +56,7 @@ export default function CtpoPage() {
                     />
                 </Box>
 
-                <Heading size="7" mb="6">Образовательные программы</Heading>
+                <Heading size={{ initial: "5", md: "7" }} mb="6">Образовательные программы</Heading>
                 <Grid columns={{ initial: '1', md: '3' }} gap="6">
                     {programs.map((prog, idx) => (
                         <Card key={idx} size="2">

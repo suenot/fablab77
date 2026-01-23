@@ -8,7 +8,7 @@ export default function FablabPage() {
             <Container size="4" px={{ initial: "4", sm: "6", md: "8" }}>
                 <Grid columns={{ initial: '1', md: '2' }} gap="8" align="center">
                     <Box>
-                        <Heading size="9" mb="6">Что такое ФАБЛАБ</Heading>
+                        <Heading size={{ initial: "7", md: "9" }} mb="6">Что такое ФАБЛАБ</Heading>
                         <Text as="p" size="4" mb="4">
                             Сегодня любой материальный продукт изготовленный человеком является результатом обработки природных или синтезированных материалов, но в будущем появятся системы, объединяющие синтез материалов и придание им необходимых формы и структуры.
                         </Text>

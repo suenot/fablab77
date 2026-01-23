@@ -30,7 +30,7 @@ export default function CovidPage() {
     return (
         <Section size="3">
             <Container size="4" px={{ initial: "4", sm: "6", md: "8" }}>
-                <Heading size="9" mb="4" align="center">COVID19</Heading>
+                <Heading size={{ initial: "7", md: "9" }} mb="4" align="center">COVID19</Heading>
 
                 <Box className="glass-card" mb="8" style={{ border: '2px solid var(--red-9)' }}>
                     <Heading size="5" mb="3" color="red">Информация для медиков</Heading>
@@ -48,7 +48,7 @@ export default function CovidPage() {
                     </Text>
                 </Box>
 
-                <Heading size="7" mb="6">Производимые модели</Heading>
+                <Heading size={{ initial: "5", md: "7" }} mb="6">Производимые модели</Heading>
                 <Grid columns={{ initial: '1', md: '3' }} gap="6">
                     {models.map((model, idx) => (
                         <Card key={idx} size="2">

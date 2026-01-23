@@ -38,7 +38,7 @@ export default function Home() {
         <Container size="4" px={{ initial: '5', md: '0' }}>
           <Grid columns={{ initial: '1', md: '2' }} gap="8" align="center">
             <Box>
-              <Heading size="8" mb="6" color="indigo">Что такое ФАБЛАБ</Heading>
+              <Heading size={{ initial: "6", md: "8" }} mb="6" color="indigo">Что такое ФАБЛАБ</Heading>
               <Text as="p" size="4" mb="4" color="gray">
                 Сегодня любой материальный продукт, изготовленный человеком, является результатом обработки природных или синтезированных материалов.
                 В будущем появятся системы, объединяющие синтез материалов и придание им необходимых формы и структуры.
@@ -78,7 +78,7 @@ export default function Home() {
               />
             </Box>
             <Box style={{ order: 0 }}>
-              <Heading size="8" mb="6" color="indigo">Откуда это</Heading>
+              <Heading size={{ initial: "6", md: "8" }} mb="6" color="indigo">Откуда это</Heading>
               <Text as="p" size="4" mb="4">
                 Рожденный как университетский проект в Центре битов и атомов Массачусетского технологического института (MIT), ФАБЛАБ превратился в глобальную сеть лабораторий цифрового производства по всему миру.
               </Text>
@@ -99,15 +99,15 @@ export default function Home() {
       {/* Technologies Section */}
       <Section size="3" id="technologies">
         <Container size="4" px={{ initial: '5', md: '0' }}>
-          <Heading size="9" mb="2" align="center">Технологии</Heading>
-          <Text size="4" color="gray" align="center" mb="8" style={{ maxWidth: '600px', margin: '0 auto 3rem auto' }}>
+          <Heading size={{ initial: "7", md: "9" }} mb="2" align="center">Технологии</Heading>
+          <Text size={{ initial: "3", md: "4" }} color="gray" align="center" mb="8" style={{ maxWidth: '600px', margin: '0 auto 3rem auto' }}>
             Набор технологических и интеллектуальных ресурсов для превращения идей в функциональные прототипы.
           </Text>
 
           <Flex direction="column" gap="9">
             {Object.entries(creativityData).map(([key, data], index) => (
               <Box key={key} id={key}>
-                <Heading size="7" mb="6" color="indigo" align={index % 2 === 0 ? 'left' : 'right'}>
+                <Heading size={{ initial: "5", md: "7" }} mb="6" color="indigo" align={index % 2 === 0 ? 'left' : 'right'}>
                   {data.title}
                 </Heading>
                 {data.sections.map((section, sIndex) => (
@@ -147,7 +147,7 @@ export default function Home() {
       {/* Team Section */}
       <Section size="3" id="team" style={{ background: 'var(--gray-2)' }}>
         <Container size="3" px={{ initial: '5', md: '0' }}>
-          <Heading size="8" mb="6" align="center">Наша команда</Heading>
+          <Heading size={{ initial: "6", md: "8" }} mb="6" align="center">Наша команда</Heading>
           <Grid columns={{ initial: '1', md: '2' }} gap="4">
             {[
               { name: "Владимир Евгеньевич Кузнецов", role: "Директор учебно-производственного центра \"ARTCAD\"", email: "fablab@misis.ru", phone: "+7 (495) 955-01-20" },
@@ -177,7 +177,7 @@ export default function Home() {
         <Container size="4" px={{ initial: '5', md: '0' }}>
           <Grid columns={{ initial: '1', md: '2' }} gap="9">
             <Box id="charter" style={{ scrollMarginTop: '100px' }}>
-              <Heading size="8" mb="6">Хартия Fablab</Heading>
+              <Heading size={{ initial: "6", md: "8" }} mb="6">Хартия Fablab</Heading>
               <Card size="3" style={{ background: 'white' }}>
                 <Flex direction="column" gap="4">
                   <Box>
@@ -202,7 +202,7 @@ export default function Home() {
             </Box>
 
             <Box id="network" style={{ scrollMarginTop: '100px' }}>
-              <Heading size="8" mb="6">Всемирная сеть</Heading>
+              <Heading size={{ initial: "6", md: "8" }} mb="6">Всемирная сеть</Heading>
               <Text as="p" size="4" mb="4">
                 В мире уже больше сотни лабораторий цифрового производства Fab Lab. Каждая лаборатория уникальна, но объединена общей идеологией.
               </Text>

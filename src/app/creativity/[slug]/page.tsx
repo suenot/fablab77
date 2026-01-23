@@ -14,7 +14,7 @@ export default async function CreativityPage({ params }: { params: Promise<{ slu
     return (
         <Section size="3">
             <Container size="4" px={{ initial: "4", sm: "6", md: "8" }}>
-                <Heading size="9" mb="8" align="center">{data.title}</Heading>
+                <Heading size={{ initial: "7", md: "9" }} mb="8" align="center">{data.title}</Heading>
 
                 <Flex direction="column" gap="8">
                     {data.sections.map((section, idx) => (

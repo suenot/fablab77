@@ -47,8 +47,8 @@ export default function EquipmentPage() {
     return (
         <Section size="3" style={{ background: 'var(--gray-1)', minHeight: '100vh' }}>
             <Container size="4" px={{ initial: '5', md: '0' }}>
-                <Heading size="9" mb="4" align="center">Парк Оборудования</Heading>
-                <Text as="p" size="5" mb="9" align="center" color="gray" style={{ maxWidth: '800px', marginInline: 'auto' }}>
+                <Heading size={{ initial: "7", md: "9" }} mb="4" align="center">Парк Оборудования</Heading>
+                <Text as="p" size={{ initial: "3", md: "5" }} mb="9" align="center" color="gray" style={{ maxWidth: '800px', marginInline: 'auto' }}>
                     Современное цифровое производство в вашем распоряжении. От 3D-печати до прецизионной фрезеровки.
                 </Text>
 
@@ -56,7 +56,7 @@ export default function EquipmentPage() {
                     {Object.entries(equipmentCategories).map(([category, items], index) => (
                         <Box key={index}>
                             <Flex align="center" gap="4" mb="5">
-                                <Heading size="7" color="indigo">{category}</Heading>
+                                <Heading size={{ initial: "5", md: "7" }} color="indigo">{category}</Heading>
                                 <Separator size="4" style={{ flex: 1, height: '2px', background: 'var(--gray-a4)' }} />
                             </Flex>
 
