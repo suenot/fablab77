@@ -29,7 +29,7 @@ const models = [
 export default function CovidPage() {
     return (
         <Section size="3">
-            <Container size="4">
+            <Container size="4" px={{ initial: "4", sm: "6", md: "8" }}>
                 <Heading size="9" mb="4" align="center">COVID19</Heading>
 
                 <Box className="glass-card" mb="8" style={{ border: '2px solid var(--red-9)' }}>

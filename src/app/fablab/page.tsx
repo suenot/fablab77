@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function FablabPage() {
     return (
         <Section size="3">
-            <Container size="4">
+            <Container size="4" px={{ initial: "4", sm: "6", md: "8" }}>
                 <Grid columns={{ initial: '1', md: '2' }} gap="8" align="center">
                     <Box>
                         <Heading size="9" mb="6">Что такое ФАБЛАБ</Heading>

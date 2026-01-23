@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function WhereFromPage() {
     return (
         <Section size="3">
-            <Container size="4">
+            <Container size="4" px={{ initial: "4", sm: "6", md: "8" }}>
                 <Heading size="9" mb="6">Откуда это</Heading>
 
                 <Grid columns={{ initial: '1', md: '2' }} gap="8" mb="8">

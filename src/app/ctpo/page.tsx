@@ -40,7 +40,7 @@ const programs = [
 export default function CtpoPage() {
     return (
         <Section size="3">
-            <Container size="4">
+            <Container size="4" px={{ initial: "4", sm: "6", md: "8" }}>
                 <Heading size="9" mb="4" align="center">ЦТПО</Heading>
                 <Text as="p" size="5" mb="8" align="center" color="gray" style={{ maxWidth: '800px', marginInline: 'auto' }}>
                     Центр технологической поддержки образования — это уникальная площадка дополнительного образования московских школьников и повышения квалификации педагогов.

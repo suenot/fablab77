@@ -20,7 +20,7 @@ const networks = [
 export default function NetworkPage() {
     return (
         <Section size="3">
-            <Container size="3">
+            <Container size="3" px={{ initial: "4", sm: "6", md: "8" }}>
                 <Heading size="9" mb="6" align="center">Всемирная сеть</Heading>
 
                 <Box mb="8">

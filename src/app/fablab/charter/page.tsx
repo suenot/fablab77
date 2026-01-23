@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function CharterPage() {
     return (
         <Section size="3">
-            <Container size="3">
+            <Container size="3" px={{ initial: "4", sm: "6", md: "8" }}>
                 <Heading size="9" mb="6" align="center">Хартия Fablab</Heading>
 
                 <Box mb="6">

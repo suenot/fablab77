@@ -34,7 +34,7 @@ export default function EventsPage() {
 
     return (
         <Section size="3">
-            <Container size="4">
+            <Container size="4" px={{ initial: "4", sm: "6", md: "8" }}>
                 <Heading size="9" mb="6" align="center">События</Heading>
                 <Box ref={containerRef} id="timepad-widget-container" style={{ minHeight: '600px' }}>
                     {/* Timepad widget will be injected here by the script */}

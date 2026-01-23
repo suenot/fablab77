@@ -12,7 +12,7 @@ const team = [
 export default function TeamPage() {
     return (
         <Section size="3">
-            <Container size="3">
+            <Container size="3" px={{ initial: "4", sm: "6", md: "8" }}>
                 <Heading size="9" mb="6" align="center">Наша команда</Heading>
                 <Flex direction="column" gap="4">
                     {team.map((member, idx) => (
