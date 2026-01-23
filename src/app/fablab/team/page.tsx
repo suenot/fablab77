@@ -23,17 +23,38 @@ export default function TeamPage() {
                                     fallback={member.name[0]}
                                     color="indigo"
                                 />
-                                <Box>
+                                <Box style={{ minWidth: 0, flex: 1 }}>
                                     <Heading size="5">{member.name}</Heading>
                                     <Text as="p" size="2" color="gray" mb="2">{member.role}</Text>
-                                    <Flex gap="4">
+                                    <Flex
+                                        gap={{ initial: "2", sm: "4" }}
+                                        direction={{ initial: "column", sm: "row" }}
+                                        wrap="wrap"
+                                    >
                                         {member.email && (
-                                            <Link href={`mailto:${member.email}`} style={{ fontSize: 'var(--font-size-2)', color: 'var(--accent-9)' }}>
+                                            <Link
+                                                href={`mailto:${member.email}`}
+                                                style={{
+                                                    fontSize: 'var(--font-size-2)',
+                                                    color: 'var(--accent-9)',
+                                                    overflow: 'hidden',
+                                                    textOverflow: 'ellipsis',
+                                                    wordBreak: 'break-all'
+                                                }}
+                                            >
                                                 {member.email}
                                             </Link>
                                         )}
                                         {member.phone && (
-                                            <Text size="2" color="gray">{member.phone}</Text>
+                                            <Text
+                                                size="2"
+                                                color="gray"
+                                                style={{
+                                                    whiteSpace: 'nowrap'
+                                                }}
+                                            >
+                                                {member.phone}
+                                            </Text>
                                         )}
                                     </Flex>
                                 </Box>
